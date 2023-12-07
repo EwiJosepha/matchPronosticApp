@@ -10,7 +10,8 @@ function App() {
   return (
     <>
     <QueryClientProvider client={client}>
-      <Capturedpage />
+      {/* <Capturedpage /> */}
+      <Selectedclubs/>
     </QueryClientProvider>
   
     </>

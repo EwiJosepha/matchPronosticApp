@@ -24,7 +24,6 @@ function Capturedpage() {
         <div className="flags">
           <div className="flag1">
             <img src=""/>
-            <p>welcome</p>
           </div>
           <div className="scores">
             <h5>1</h5>
@@ -33,7 +32,6 @@ function Capturedpage() {
           </div>
           <div className="flag2">
             <img src="" />
-            <p>welcome</p>
           </div>
         </div>
       </div>
