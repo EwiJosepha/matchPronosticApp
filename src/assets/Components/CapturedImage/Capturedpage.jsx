@@ -1,5 +1,15 @@
 import "./capturedpage.css";
+import { Appcontextt } from "../Hooks/context";
+import { useContext } from "react";
 function Capturedpage() {
+  const { scores, setScores, scores2 } = useContext(Appcontextt);
+  const clubflags = JSON.parse(localStorage.getItem("clubkeys"));
+  const clubflags2 = JSON.parse(localStorage.getItem("clubkeys2"));
+  const firstflag = clubflags;
+  const secondFlag = clubflags2;
+  console.log(secondFlag);
+
+  console.log(scores, "from captured");
   return (
     <>
       <div className="body">
@@ -23,15 +33,20 @@ function Capturedpage() {
         </div>
         <div className="flags">
           <div className="flag1">
-            <img src=""/>
+            {/* {firstflag &&
+              <img src={firstflag[0].url}/>
+            } */}
           </div>
           <div className="scores">
-            <h5>1</h5>
+            <h5>{scores}</h5>
             <h5>-</h5>
-            <h5>1</h5>
+            <h5>{scores2}</h5>
           </div>
           <div className="flag2">
-            <img src="" />
+            {/* {secondFlag && 
+            <img src={secondFlag[0].url} />
+
+            } */}
           </div>
         </div>
       </div>
