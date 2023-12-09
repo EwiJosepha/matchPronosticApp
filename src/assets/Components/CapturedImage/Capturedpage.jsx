@@ -4,7 +4,7 @@ import { useContext } from "react";
 function Capturedpage() {
   const { scores, setScores, scores2 } = useContext(Appcontextt);
   const clubflags = JSON.parse(localStorage.getItem("clubkeys"));
-  const clubflags2 = JSON.parse(localStorage.getItem("clubkeys2"));
+  const clubflags2 = JSON.parse(localStorage.getItem("clubkey2"));
   const firstflag = clubflags;
   const secondFlag = clubflags2;
   console.log(secondFlag);
@@ -24,8 +24,8 @@ function Capturedpage() {
             <p>...</p>
           </div>
           <div className="rightheaders">
-            <i class="fa-solid fa-wifi"></i>
-            <i class="fa-solid fa-battery-three-quarters"></i>
+            <i className="fa-solid fa-wifi"></i>
+            <i className="fa-solid fa-battery-three-quarters"></i>
           </div>
         </div>
         <div className="bgimage">
@@ -33,9 +33,9 @@ function Capturedpage() {
         </div>
         <div className="flags">
           <div className="flag1">
-            {/* {firstflag &&
-              <img src={firstflag[0].url}/>
-            } */}
+            {firstflag &&
+             <img src={firstflag.url} />
+            }
           </div>
           <div className="scores">
             <h5>{scores}</h5>
@@ -43,10 +43,9 @@ function Capturedpage() {
             <h5>{scores2}</h5>
           </div>
           <div className="flag2">
-            {/* {secondFlag && 
-            <img src={secondFlag[0].url} />
-
-            } */}
+            {secondFlag &&
+              <img src={secondFlag.url} />
+            }
           </div>
         </div>
       </div>
