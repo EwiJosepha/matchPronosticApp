@@ -7,7 +7,7 @@ function Selectclubs() {
   const navigate = useNavigate();
   const { scores, setScores, score2, setScores2 } = useContext(Appcontextt);
   const clubs = jsonObject.clubs;
-  const [clubss, setClubss] = useState(clubs);
+  const [clubss, setClubss] = useState();
 
 
   function handlescores(clubs) {

@@ -1,7 +1,14 @@
 import "./capturedpage.css";
 import { Appcontextt } from "../Hooks/context";
-import { useContext } from "react";
+import {  createRef, useContext } from "react";
+import { useScreenshot, createFileName } from "use-react-screenshot";
 function Capturedpage() {
+  const [image, takeScreenshot]= useScreenshot({
+    type: "image/jpeg",
+    quality: 1.0
+  })
+
+  const ref = createRef(null)
   const { scores, setScores, scores2 } = useContext(Appcontextt);
   const clubflags = JSON.parse(localStorage.getItem("clubkeys"));
   const clubflags2 = JSON.parse(localStorage.getItem("clubkey2"));
@@ -9,11 +16,24 @@ function Capturedpage() {
   const secondFlag = clubflags2;
   console.log(secondFlag);
 
+  function download (image,{name= "img", extension = "jpg"} = {} ){
+    const a = document.createElement("a")
+    a.href = image
+    a.download = createFileName(extension, name)
+    a.click()
+    
+  }
+  
+ function takescreenshot () {
+    takeScreenshot(ref.current).then(download)
+ }
+
   console.log(scores, "from captured");
   return (
     <>
-      <div className="body">
-        <div className="headers">
+      <div className="body"  ref={ref}>
+        <button onClick={takescreenshot}>Take screenshot</button>
+        <div className="headers" >
           <div className="leftheaders">
             <p>11:24</p>
             <div className="icons">
