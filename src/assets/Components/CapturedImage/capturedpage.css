@@ -43,6 +43,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  margin-top: -19px;
 }
 
 .header1 {
@@ -75,6 +76,7 @@
 
 .rightheaders {
   color: #fff;
+  padding-right: 8px;
 }
 
 .flags {
@@ -160,6 +162,29 @@ h5 {
   border-radius: 8px;
   outline: none;
   border: none;
+  padding: 12px;
+  margin-left: 51px;
+  float: left;
+  font-size: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
+}
+
+#screenshot{
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  padding: 12px;
+  margin-left: 51px;
+  margin-top: 10px;
+  float: left;
+  font-size: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
+}
+
+.btnscreen {
+  padding-top: 30px;
 }
 
 h2 {

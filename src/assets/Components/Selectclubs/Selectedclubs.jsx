@@ -49,7 +49,6 @@ function Selectclubs() {
     <>
       <div className="body1">
         <div className="header1">
-          <h1 id="title"> Click On Any Flag to Forecast the Score </h1>
           {scores ? (
             <button
               id="btn"
@@ -57,7 +56,7 @@ function Selectclubs() {
                 navigate("/CapturedImage");
               }}
             >
-              Submit Scores
+              Submit clubs
             </button>
           ) : (
             <h2>Please select a Club</h2>
